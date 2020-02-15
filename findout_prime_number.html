@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+      <script>
+         function submitClick(n){
+             var i;
+             var flag = true;
+             n = parseInt(n) 
+          
+            for(i = 2; i <= n - 1; i++) 
+                if (n % i == 0) { 
+                    flag = false; 
+                    break; 
+                } 
+                if(n == 1){
+                    flag = false;
+                }
+                  
+                // Check and display alert message 
+            if (flag == true) 
+                alert(n + " is prime"); 
+            else
+                alert(n + " is not prime");   
+  
+         }
+      </script>
+    </head>
+    <body class="container">
+        <h2>Check the number wheather prime or not</h2>
+        <div>
+            <form name="register">
+                 <input class="form-control" type="number" name="number" value="">
+                 <input type="submit" class="btn btn-success"
+                  onclick="submitClick(window.document.forms[0].elements[0].value)"
+                 >
+            </form>
+        </div>
+    </body>
+</html>
