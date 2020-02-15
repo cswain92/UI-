@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+      <script>
+          function submitClick(n){
+           var b = n.split("").reverse().join("");
+          document.write(b);
+          }
+       
+      </script>
+    </head>
+    <body class="container">
+        <h2>Reverse of any number</h2>
+        <div>
+            <form name="register">
+                 <input class="form-control" type="number" name="number" value="">
+                 <input type="submit" class="btn btn-success"
+                  onclick="submitClick(window.document.forms[0].elements[0].value)"
+                 >
+            </form>
+            <!-- <div id="result" style="border: 2px solid darkcyan; height: 100px; width: 100px; color: black;">
+                 
+            </div> -->
+        </div>
+    </body>
+</html>
