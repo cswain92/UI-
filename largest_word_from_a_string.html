@@ -1,1 +1,31 @@
 
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function find_longest_word(str){
+                var array = str.match(/\w[a-z]{0,}/gi);
+                /*
+                The g and i modifiers have these meanings:
+
+g = global, match all instances of the pattern in a string, not just one
+i = case-insensitive (so, for example, /a/i will match the string "a" or "A".
+In the context you gave (/[^\w\s]/gi), the i is meaningless, because there are no case-specific portions of the regex.
+                */
+                var result = array[0];
+                for(var x=1; x< array.length; x++){
+                    if(result.length< array[x].length){
+                        result= array[x];
+                    }
+                }
+                return result;
+                
+
+            }
+           alert( find_longest_word("@hello don TOKAAA"));
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
