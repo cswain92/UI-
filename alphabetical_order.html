@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <script>
+           function alphabet_order(str){
+              // alert(str);
+               var res= str.split("").sort().join("");
+               document.write(res);
+           }
+           
+         </script>
+    </head>
+    <body>
+            <form name="register">
+                    <input class="form-control" type="text" name="number" value="">
+                    <input type="submit" 
+                     onclick="alphabet_order(window.document.forms[0].elements[0].value)"
+                    >
+               </form>
+
+    </body>
+</html>
