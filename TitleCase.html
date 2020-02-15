@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <script>
+           function alphabet_order(str){
+              var char= str.toLowerCase().split(" ");
+              for(var i=0; i< char.length; i++){
+              var firstChar= char[i].charAt(0);
+              var restChar = char[i].substring(1);
+              var newStr= firstChar.toUpperCase()+ restChar.toLowerCase()+ " ";
+            
+               document.write(newStr);
+              }
+           }
+           
+         </script>
+    </head>
+    <body>
+            <form name="register">
+                    <input class="form-control" type="text" name="number" value="">
+                    <input type="submit" 
+                     onclick="alphabet_order(window.document.forms[0].elements[0].value)"
+                    >
+               </form>
+
+    </body>
+</html>
